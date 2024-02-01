@@ -105,7 +105,7 @@ rename_extension=".bak"
 for file in *; do
     if [ -f "$file" ]; then
         rename_file="$file$rename_extension"
-        cp "$file" "$backup_file"
+        cp "$file" "$rename_file"
         echo "Renamed File $file as $rename_file"
     fi
 done
