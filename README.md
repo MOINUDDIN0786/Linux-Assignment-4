@@ -42,7 +42,7 @@ sudo mv MyFiles/document.txt MyFiles/Document
 
 
 
-![image](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/e7612bff-bd49-492a-b77a-40f3b22b42e7)
+
 
 
 
