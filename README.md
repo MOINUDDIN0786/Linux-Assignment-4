@@ -1,7 +1,7 @@
 # Linux-Assignment-4
 **Ques 1: Create a directory named "MyFiles" in your home directory. Navigate into this directory and list its contents.**
 
-``` bash
+``` 
 cd /home
 ```
 ```
@@ -243,6 +243,34 @@ echo $CUSTOM_PATH
 ![Screenshot from 2024-02-02 14-08-23](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/4e3eb4d2-84aa-4618-9db8-baf1270593f4)
 
 ![Screenshot from 2024-02-02 14-09-58](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/35038695-cd2b-4e5e-b76a-7309a1663c88)
+
+**Ques 12 : Use the echo command to add a new line of text to the "my_notes.txt" file without overwriting existing content. Verify that the new text is appended.**
+
+```
+cd /home/MyFiles
+```
+```
+sudo su
+```
+```
+echo "I am writing text in new line" >> my_notes.txt
+```
+```
+cat my_notes.txt
+```
+**Output**
+
+![Screenshot from 2024-02-02 14-21-47](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/66aef82f-825f-4bd8-bb3a-bb924d3f9aaa)
+
+**Ques 13 : List all files in the "/etc" directory, filter the output to include only those containing the word "conf," and save the result to a file named "conf_files.txt."**
+
+```
+ls /etc | grep 'conf' > conf_files.txt
+```
+```
+vim conf_files.txt
+```
+
 
 
 
