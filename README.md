@@ -123,6 +123,135 @@ sudo bash ../rename.sh
 
 ![Screenshot from 2024-02-01 18-21-48](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/53789776-4d53-41ae-aa22-9fc2689807b0)
 
+**Ques 7: Use a wildcard character to copy all files from the "Documents" subdirectory of "MyFiles" to another directory named "Backup."**
+
+```
+cd /home
+```
+```
+cd MyFiles
+```
+```
+sudo mkdir backup
+```
+```
+cd
+```
+```
+sudo cp /home/MyFiles/Document/* /home/MyFiles/backup/
+```
+
+**Output**
+
+![Screenshot from 2024-02-02 10-34-55](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/c332f2ed-32cb-4b7f-bafb-0847d58896df)
+
+**Ques 8 :Execute the ls command to list files in the current directory. Save the output to a file named "file_list.txt." Then, use a pipe to filter the output through grep to display only files with a ".txt" extension.**
+
+```
+sudo su
+```
+```
+cd /home/MyFiles/
+```
+```
+touch file_list.txt
+```
+```
+cd Document
+```
+```
+chmod +rwx a.txt b
+```
+```
+cd ..
+```
+```
+chmod +rwx file_list.txt
+```
+```
+cd Document
+```
+```
+ls > ../file_list.txt
+```
+```
+grep '\.txt$' file_list.txt
+```
+
+**Output**
+
+
+
+![Screenshot from 2024-02-02 11-03-35](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/e3837160-18c3-46b0-a58b-954879d260af)
+
+**Ques 9: Create a new text file named "my_notes.txt" using the touch command. Open the file in the Vim editor, add some text, and save the changes.**
+```
+cd /home/MyFiles/
+```
+```
+sudo touch my_notes.txt
+```
+```
+sudo vim my_notes.txt
+```
+**Output**
+
+
+![Screenshot from 2024-02-02 11-22-48](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/55489b45-3f5d-4b2d-a630-cf437c3fe3d4)
+
+![Screenshot from 2024-02-02 11-26-52](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/ed690270-cf6c-446d-a5a3-9e0bcf7c0b56)
+
+**Ques 10 :Run the date command and store the output in a variable named "current_date." Display the value of the variable and append it to the "my_notes.txt" file.**
+
+```
+cd /home/MyFiles/
+```
+```
+sudo su
+```
+```
+current_date=$(date)
+```
+```
+echo "current date : $current_date"
+```
+```
+echo "$current_date" >> my_notes.txt
+```
+**Output**
+
+![Screenshot from 2024-02-02 11-37-48](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/4bf8b699-36ce-4a7b-be32-6654a0858846)
+
+![Screenshot from 2024-02-02 11-42-47](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/c46260f6-236f-4214-b0a5-88cf3fa08e7b)
+
+
+**Ques 11 : Edit the Bash startup script (e.g., .bashrc) to set an environment variable named "CUSTOM_PATH" to a specific directory path. Ensure the variable is available in new shell sessions.**
+```
+vim .bashrc
+```
+```
+export CUSTOM_PATH="/home/MyFiles/Document"
+```
+```
+source ~/.bashrc
+```
+```
+echo $CUSTOM_PATH
+```
+**Output**
+
+![Screenshot from 2024-02-02 14-08-23](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/4e3eb4d2-84aa-4618-9db8-baf1270593f4)
+
+![Screenshot from 2024-02-02 14-09-58](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/35038695-cd2b-4e5e-b76a-7309a1663c88)
+
+
+
+
+
+
+
+
+
 
 
 
