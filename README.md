@@ -333,6 +333,35 @@ sudo chage -E $(date -d "+1 month" +"%Y-%m-%d") john_doe
 **Ques 18 :Create a new group named "development_team." Add "john_doe" to this group and verify the group's existence.**
 
 ```
+sudo groupadd development_team
+```
+```
+sudo usermod -aG development_team john_doe
+```
+```
+getent group development_team
+```
+**Output**
+
+![Screenshot from 2024-02-03 11-04-39](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/1c353beb-db1e-4727-9539-f6240b675779)
+
+**Ques 19 : Remove "john_doe" from the "users" group and add them to the "development_team" group. Confirm the changes.**
+
+```
+sudo gpasswd -d john_doe users
+```
+```
+sudo usermod -aG development_team john_doe
+```
+```
+groups john_doe
+```
+**Output**
+
+![Screenshot from 2024-02-03 11-10-17](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/54848d72-c6dd-4388-9ca3-7b792465358a)
+
+**Ques 20 :
+
 
 
 
