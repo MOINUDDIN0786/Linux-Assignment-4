@@ -92,36 +92,21 @@ sudo ls /home/MyFiles/a*.txt
 **Ques 6: Rename all files in the "Documents" subdirectory of "MyFiles" with a ".bak" extension. Ensure the original file names are preserved.**
 
 ```
-cd /home/MyFiles
+cd /home/MyFiles/Document
 ```
 ```
-sudo vim rename.sh
+sudo touch a.txt b c.txt d.txt
 ```
 ```
-#!/bin/bash
-
-rename_extension=".bak"
-
-for file in *; do
-    if [ -f "$file" ]; then
-        rename_file="$file$rename_extension"
-        cp "$file" "$rename_file"
-        echo "Renamed File $file as $rename_file"
-    fi
-done
+sudo rename -n 's/\.txt$/.bak/' *.txt
 ```
 ```
-cd Document
-```
-```
-touch a.txt b c.txt d.txt
-```
-```
-sudo bash ../rename.sh
+sudo rename 's/\.txt$/.bak/' *.txt
 ```
 **Output**
+![Screenshot from 2024-02-03 13-42-36](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/ff7ff513-3233-4ebc-8268-36195650273d)
 
-![Screenshot from 2024-02-01 18-21-48](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/53789776-4d53-41ae-aa22-9fc2689807b0)
+
 
 **Ques 7: Use a wildcard character to copy all files from the "Documents" subdirectory of "MyFiles" to another directory named "Backup."**
 
