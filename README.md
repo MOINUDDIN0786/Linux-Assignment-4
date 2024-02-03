@@ -391,6 +391,81 @@ getent group development_team
 ![Screenshot from 2024-02-03 11-56-05](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/3c86c99f-3682-40f3-8b61-8cedc9cf0694)
 
 
+**Ques 22 : Implement a password policy that requires users to change their passwords every 90 days. Apply this policy to all existing and new user accounts.**
+
+```
+sudo chage -M 90 -m 0 -W 7 -I 30 -E -1 $(cut -d: -f1 /etc/passwd)
+```
+```
+sudo vim /etc/login.defs
+```
+**Inside this file add max pass day as 90 and min pass day as 0**
+
+```
+PASS_MAX_DAYS   90
+PASS_MIN_DAYS   0
+```
+**Output**
+
+![Screenshot from 2024-02-03 12-12-05](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/3644184f-f833-47b8-a2a2-b451e18825c4)
+
+
+![Screenshot from 2024-02-03 12-12-58](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/356acac8-86e3-4d89-a918-6545a4d1c408)
+
+**Ques 23 : Manually lock the user account "john_doe." Attempt to log in as "john_doe" to confirm that the account is locked. Then, unlock the account.**
+
+```
+sudo passwd -l john_doe
+```
+```
+su - john_doe
+```
+```
+sudo passwd -u john_doe
+```
+**Output**
+
+![Screenshot from 2024-02-03 12-21-10](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/c798c600-9574-46db-8e78-a57aec3e0cfa)
+
+**Ques 24 : Use the id command to display detailed information about the "john_doe" user, including user ID, group ID, and supplementary groups.**
+
+```
+id john_doe
+```
+```
+id -u john_doe
+id -g john_doe
+```
+```
+id -G john_doe
+```
+**Output**
+
+![Screenshot from 2024-02-03 12-27-32](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/04f4eb82-1a03-4096-b778-e583a75f97c0)
+
+**Ques 25 : Configure the password aging for the user "john_doe" to enforce a maximum password age of 60 days. Confirm that the changes take effect.**
+
+```
+sudo chage -M 60 john_doe
+```
+```
+sudo chage -l john_doe
+```
+**Output**
+
+
+![Screenshot from 2024-02-03 12-32-24](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/6536b02f-3083-4eb2-bd27-1fa6703e699d)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
