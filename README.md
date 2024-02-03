@@ -284,6 +284,55 @@ sudo vim my_notes.txt
 ```
 **Output**
 
+![Screenshot from 2024-02-03 10-39-06](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/b519ffe1-db4e-4530-8ac2-45400c9cd356)
+
+
+**Ques 15 : Create a new user account named "john_doe." Set the user's home directory to "/home/john_doe" and assign the user to the "users" group.**
+
+```
+sudo useradd -m -d /home/john_doe -g users john_doe
+```
+**Output**
+
+![Screenshot from 2024-02-02 15-58-43](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/b207ab3a-bf14-453d-976e-6f927418bd4a)
+
+**Ques 16 : Add the user "john_doe" to the sudoers file, allowing them superuser privileges. Confirm that "john_doe" can execute commands with sudo.**
+
+```
+sudo visudo
+```
+**Inside visudo file write below content and save it and exit**
+
+```
+john_doe ALL=(ALL:ALL) ALL
+```
+**Write any desire path**
+```
+sudo ls /Desktop
+```
+```
+sudo su
+```
+**Output**
+
+![Screenshot from 2024-02-02 17-37-03](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/620817c9-3c3d-407b-a145-db82b5d5a44e)
+
+**Ques 17 :Modify the user account "john_doe" to change the default shell to "/bin/bash" and set the account's expiration date to one month from today.**
+
+```
+sudo chsh -s /bin/bash john_doe
+```
+```
+sudo chage -E $(date -d "+1 month" +"%Y-%m-%d") john_doe
+```
+**Output**
+
+![Screenshot from 2024-02-03 11-01-04](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/45bf1950-6121-4c80-bf11-f0e01ce18b6f)
+
+
+**Ques 18 :Create a new group named "development_team." Add "john_doe" to this group and verify the group's existence.**
+
+```
 
 
 
