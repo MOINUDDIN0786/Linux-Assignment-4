@@ -360,7 +360,37 @@ groups john_doe
 
 ![Screenshot from 2024-02-03 11-10-17](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/54848d72-c6dd-4388-9ca3-7b792465358a)
 
-**Ques 20 :
+**Ques 20 :Delete the user account "john_doe" and ensure that their home directory is also removed.**
+
+```
+sudo userdel -r john_doe
+```
+```
+groups jhon_doe
+```
+**Output**
+
+![Screenshot from 2024-02-03 11-50-23](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/454afda8-aa0e-4269-9338-b58bdc89b47b)
+
+**Ques 21 : Delete the group "development_team" and ensure that all users previously belonging to the group are appropriately handled.**
+
+```
+getent group development_team
+```
+```
+sudo usermod -g users jhon_doe
+```
+```
+sudo groupdel development_team
+```
+```
+getent group development_team
+```
+**Output**
+
+![Screenshot from 2024-02-03 11-56-05](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/3c86c99f-3682-40f3-8b61-8cedc9cf0694)
+
+
 
 
 
