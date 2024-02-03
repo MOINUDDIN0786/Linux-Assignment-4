@@ -104,6 +104,7 @@ sudo rename -n 's/\.txt$/.bak/' *.txt
 sudo rename 's/\.txt$/.bak/' *.txt
 ```
 **Output**
+
 ![Screenshot from 2024-02-03 13-42-36](https://github.com/MOINUDDIN0786/Linux-Assignment-4/assets/64195957/ff7ff513-3233-4ebc-8268-36195650273d)
 
 
