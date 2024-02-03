@@ -270,6 +270,23 @@ ls /etc | grep 'conf' > conf_files.txt
 ```
 vim conf_files.txt
 ```
+**Ques 14 : Open the "my_notes.txt" file in Vim. Use Vim's search and replace functionality to replace all occurrences of the word "important" with "critical." Save the changes.**
+
+```
+cd /home/MyFiles
+```
+```
+sudo vim my_notes.txt
+```
+**After opening file write below  command after press shift + colon
+```
+%s/important/critical/g
+```
+**Output**
+
+
+
+
 
 
 
